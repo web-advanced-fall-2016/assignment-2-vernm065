@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Assignment 02</title>
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+</head>
+
+<body>
+
+    <section id="main">
+
+        <div class="title"><align= center><span>MFADT Humans.</span></align></div>
+        <div id="add-more">
+            <a href="#" data-title="Add Your Profile" data-mymodal='{"contentId":"profile-form"}'></a>
+        </div>
+
+    </section>
+    <div data-mymodal-content="profile-form" class="profile-form hidden">
+        <form method="post" id="profile-submission-form">
+            <fieldset>
+                <div class="form-group form-inline">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="spacecats@gmail.com" required>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="profile-picture">Profile Picture</label><br>
+                    <img src="img/profile_thumb.png" height="200" style="margin-bottom:7px;" alt="Profile Picture">
+                    <input type="file" accept=".jpg,.jpeg,.png" class="form-control-file" name="profile-picture" id="profile-picture" aria-describedby="picture-help" required>
+                    <small id="picture-help" class="form-text text-muted">Only .jpg/.png files accepted! Picture size must be less than 1Mb!</small>
+                </div>
+                <div class="form-group form-inline">
+                    <label>Name</label>
+                    <input type="text" class="form-control" name="first_name" placeholder="Marielle" required>
+                    <input type="text" class="form-control" name="last_name" placeholder="SpaceCats" required>
+                </div>
+                <div class="form-group">
+                    <label for="excerpt">Tagline</label>
+                    <input type="text" class="form-control" name="excerpt" placeholder="I have space fleas.">
+                </div>
+                <div class="form-group">
+                    <label for="full_bio">Bio</label>
+                    <textarea rows="4" style="max-width:100%;" name="full_bio" class="form-control" placeholder="I am..." required></textarea>
+                </div>
+                <div class="form-group">
+
+                    <label for="links">Links</label>
+                    <div id="links-group">
+                        <div class="input-group link">
+                            <input class="form-control" type="url" name="url" placeholder="https://github.com/vernm065">
+                            <div class="btn btn-default add-more-links">✚</div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button btn btn-primary" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Saving Profile">Save your profile</button>
+            </fieldset>
+        </form>
+    </div>
+
+
+    <script src="scripts/simple-modal.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
+
